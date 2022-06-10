@@ -2,7 +2,6 @@ package fr.noah.api.manager.event;
 
 import fr.noah.api.API;
 import fr.noah.api.listeners.hub.LobbyListeners;
-import fr.noah.api.listeners.players.Join;
 import org.bukkit.Bukkit;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.PluginManager;
@@ -19,10 +18,7 @@ public class EventManager {
     }
 
     private void registerEvents() {
-        pluginManager.registerEvents(new Join(api), api);
         pluginManager.registerEvents(new LobbyListeners(api), api);
-
-
     }
 
     public void addNewEveListener(Listener listener) {
